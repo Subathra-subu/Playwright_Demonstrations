@@ -18,7 +18,7 @@ dotenv.config({
   path: path.resolve(`env/.env.${envName}`)
 });
 
-console.log("ENV =", process.env.ENV);
+// console.log("ENV =", process.env.ENV);
 
 
 // const result = dotenv.config({
