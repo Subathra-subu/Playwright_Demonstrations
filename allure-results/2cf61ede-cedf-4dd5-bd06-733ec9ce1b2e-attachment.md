@@ -1,0 +1,41 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: CodegenDemo.test.ts >> test
+- Location: tests\CodegenDemo.test.ts:3:5
+
+# Error details
+
+```
+Error: page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://the-internet.herokuapp.com/login", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('test', async ({ page }) => {
+> 4  |   await page.goto('https://the-internet.herokuapp.com/login');
+     |              ^ Error: page.goto: Target page, context or browser has been closed
+  5  |   await expect(page.getByRole('heading', { name: 'This is where you can log' })).toBeVisible();
+  6  | 
+  7  |   await page.getByRole('textbox', { name: 'Username' }).click();
+  8  |   await page.getByRole('textbox', { name: 'Username' }).fill('tomsmith');
+  9  |   await page.getByRole('textbox', { name: 'Password' }).click();
+  10 |   await page.getByRole('textbox', { name: 'Password' }).fill('SuperSecretPassword!');
+  11 |   await page.getByRole('button', { name: ' Login' }).click();
+  12 |   await expect(page.getByRole('link', { name: '×' })).toBeVisible();
+  13 | 
+  14 |   await page.getByRole('link', { name: 'Logout' }).click();
+  15 |   await expect(page.locator('#flash')).toContainText('You logged out of the secure area!');
+  16 | });
+```
