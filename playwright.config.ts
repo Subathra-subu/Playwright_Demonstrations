@@ -15,7 +15,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 const envName = process.env.ENV || 'qa';
 
 dotenv.config({
-  path: path.resolve(`env/.env.${envName}`)
+  path: `./env/.env.${envName}`
 });
 
 // console.log("ENV =", process.env.ENV);
@@ -30,11 +30,6 @@ dotenv.config({
 // const envPath = path.resolve(`env/.env.${envName}`);
 
 // console.log(envPath);
-
-// dotenv.config({
-//   path: envPath
-// });
-
 
 export default defineConfig({
   testDir: './tests',
