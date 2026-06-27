@@ -1,0 +1,15 @@
+STORE
+https://www.demoblaze.com/
+<!DOCTYPE html><html lang="en"><head><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-

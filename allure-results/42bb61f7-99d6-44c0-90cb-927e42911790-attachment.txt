@@ -1,0 +1,5 @@
+Before fill('') usage: The cat was playing in the garden.
+
+After fill('') usage: 
+Text content usage: The cat was playing in the garden.
+

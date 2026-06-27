@@ -1,0 +1,3 @@
+Before fill('') usage: The cat was playing in the garden.
+
+After fill('') usage: 

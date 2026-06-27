@@ -1,0 +1,3 @@
+Url: about:blank
+Title: 
+Page content: <html><head></head><body></body></html>
