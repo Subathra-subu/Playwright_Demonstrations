@@ -1,0 +1,7 @@
+First window URL:url() {
+        return this._mainFrame.url();
+      }
+New window URL:url() {
+        return this._mainFrame.url();
+      }
+New Window content:This is a sample page
