@@ -1,0 +1,6 @@
+Type: alert
+Message: Hello
+Type: prompt
+Message: What is your name?
+Type: confirm
+Message: Press OK to confirm

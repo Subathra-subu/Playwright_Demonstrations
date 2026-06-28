@@ -1,0 +1,14 @@
+Clear command check:
+Before fill('') usage: The cat was playing in the garden.
+
+After fill('') usage: 
+Textcontent command check:
+Text content usage: The cat was playing in the garden.
+
+Enable command check:
+The button is Enabled
+The button is Disabled
+Check command check:
+The Checkbox is Disabled
+The Checkbox is Enabled
+The Checkbox is Checked
