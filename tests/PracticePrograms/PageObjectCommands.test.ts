@@ -41,21 +41,20 @@ test('Element commands',async({page})=>{
 
     await checkBox.check();
 
-    if(await checkBox.isChecked()== true){
+    if(await checkBox.isChecked()){
         console.log("The Checkbox is Checked");
     }
 
     const checkedCheckBox =page.locator('#checkbox1');
 
-    if(await checkedCheckBox.isChecked()== true){
+    if(await checkedCheckBox.isChecked()){
         console.log("The Checkbox is Checked");
     }
 
     await checkedCheckBox.uncheck();
 
-    if(await checkedCheckBox.isChecked()== false){
-        console.log("The Checkbox is UnChecked");
-    }
+    await expect(checkedCheckBox).not.toBeChecked()
+    console.log("The Checkbox is UnChecked");
 
     console.log("Visible command check:");
     const readOnlyText = page.locator('#rotb');

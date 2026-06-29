@@ -1,0 +1,89 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Markers\Skip.test.ts >> LoginTest @smoke
+- Location: tests\Markers\Skip.test.ts:3:1
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator:  getByRole('link', { name: 'Log out' })
+Expected: visible
+Received: undefined
+
+```
+
+```
+Error: expect(locator).toHaveText(expected) failed
+
+Locator:  getByRole('link', { name: 'Log out' })
+Expected: "Log out"
+Received: ""
+
+```
+
+```
+Error: expect(locator).toHaveText(expected) failed
+
+Locator:  locator('#nameofuser')
+Expected: "Welcome admin"
+Received: ""
+
+```
+
+# Test source
+
+```ts
+  1  | import { expect,test } from '@playwright/test';
+  2  | 
+  3  | test('LoginTest @smoke',async({page})=>{
+  4  |     await page.goto("https://www.demoblaze.com/");
+  5  |     await page.locator("#login2").click();
+  6  |     await page.locator("#loginusername").fill("admin");
+  7  |     await page.locator("#loginpassword").fill("admin");
+  8  |     await page.locator("//button[text()='Log in']").click();
+  9  | 
+  10 |     await expect.soft(page.getByRole("link",{name:'Log out'})).toBeVisible();
+  11 |     await expect.soft(page.getByRole("link",{name:'Log out'})).toHaveText("Log out");
+> 12 |     expect.soft(page.locator("#nameofuser")).toHaveText("Welcome admin");
+     |                                              ^ Error: expect(locator).toHaveText(expected) failed
+  13 | })
+  14 | 
+  15 | test.skip('LoginTest1',async({page})=>{
+  16 |     test.skip(true,"Under development");
+  17 |     await page.goto("https://www.demoblaze.com/");
+  18 |     await page.locator("#login2").click();
+  19 |     await page.locator("#loginusername").fill("admin");
+  20 |     await page.locator("#loginpassword").fill("admin");
+  21 |     await page.locator("//button[text()='Log in']").click();
+  22 | 
+  23 |     await expect.soft(page.getByRole("link",{name:'Log out'})).toBeVisible();
+  24 |     await expect.soft(page.getByRole("link",{name:'Log out'})).toHaveText("Log out");
+  25 |     expect.soft(page.locator("#nameofuser")).toHaveText("Welcome admin");
+  26 | })
+  27 | 
+  28 | test('LoginTest2 @smoke',async({page})=>{
+  29 |     await page.goto("https://www.demoblaze.com/");
+  30 |     await page.locator("#login2").click();
+  31 |     await page.locator("#loginusername").fill("admin");
+  32 |     await page.locator("#loginpassword").fill("admin");
+  33 |     await page.locator("//button[text()='Log in']").click();
+  34 | 
+  35 |     await expect.soft(page.getByRole("link",{name:'Log out'})).toBeVisible();
+  36 |     await expect.soft(page.getByRole("link",{name:'Log out'})).toHaveText("Log out");
+  37 |     expect.soft(page.locator("#nameofuser")).toHaveText("Welcome admin");
+  38 | })
+  39 | 
+  40 | 
+  41 | 
+  42 | 
+  43 | 
+  44 | 
+```

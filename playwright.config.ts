@@ -5,6 +5,7 @@ import {chromium,defineConfig, devices } from '@playwright/test';
  * https://github.com/motdotla/dotenv
  */
 import dotenv from 'dotenv';
+
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
@@ -32,6 +33,10 @@ dotenv.config({
 // console.log(envPath);
 
 export default defineConfig({
+  timeout:40000,
+  expect:{timeout:10000},
+  
+  // repeatEach:2,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -48,7 +53,7 @@ export default defineConfig({
 ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
-  // testMatch:['tests/Alerts.test.ts'],
+  testMatch:['tests/PracticePrograms/MouseActions.test.ts'],
   
   use: {
     // browserName:'chromium',

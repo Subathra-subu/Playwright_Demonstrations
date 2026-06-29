@@ -1,0 +1,7 @@
+
+Title: KeyboardAction
+Status: passed
+ExpectedStatus: passed
+Duration: 0
+Retry: 0
+Output Directory: D:\Playwright Demonstrations\test-results\PracticePrograms-KeyboardActions-KeyboardAction-chromium
