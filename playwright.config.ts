@@ -53,7 +53,7 @@ export default defineConfig({
 ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
-  testMatch:['tests/PracticePrograms/MouseActions.test.ts'],
+  // testMatch:['tests/PracticePrograms/MouseActions.test.ts'],
   
   use: {
     // browserName:'chromium',
