@@ -1,7 +1,0 @@
-First window URL:https://demoqa.com/browser-windows
-Count: 3
-URL: https://demoqa.com/browser-windows
-URL: https://demoqa.com/sample
-Sample page Heading: This is a sample page
-URL: https://demoqa.com/sample
-Sample page Heading: This is a sample page

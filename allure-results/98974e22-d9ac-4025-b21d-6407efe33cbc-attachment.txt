@@ -1,6 +1,0 @@
-Input1:[object Promise]
-Input2:[object Promise]
-Width:180
-Height:45.333343505859375
-X:49
-Y:180

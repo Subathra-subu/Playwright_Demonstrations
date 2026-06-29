@@ -1,3 +1,0 @@
-Url: [Function: url]
-Title: [AsyncFunction: title]
-Page content: [AsyncFunction: content]

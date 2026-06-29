@@ -1,3 +1,0 @@
-Input1:[object Promise]
-Input2:[object Promise]
-{ x: 49, y: 484.8333435058594, width: 180, height: 45.333343505859375 }
