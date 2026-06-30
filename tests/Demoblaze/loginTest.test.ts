@@ -1,5 +1,5 @@
 import { expect,test } from "@playwright/test";
-import login_data from "../../testData/login_data.json" with {type:"json"};
+import login_data from "../../testData/login_data.json";
 
 interface LoginData{
     testName:string,
