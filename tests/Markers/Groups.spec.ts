@@ -22,7 +22,7 @@ test.describe("Login2 @sanity",()=>{
         await page.goto("https://www.demoblaze.com/");
         await page.locator("#login2").click();
         await page.locator("#loginusername").fill("admin");
-        await page.locator("#loginpasswor").fill("admin");
+        await page.locator("#loginpassword").fill("admin");
         await page.locator("//button[text()='Log in']").click();
 
         await expect.soft(page.getByRole("link",{name:'Log out'})).toBeVisible();

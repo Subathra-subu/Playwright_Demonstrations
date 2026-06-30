@@ -9,7 +9,7 @@ test('KeyboardAction',async({page},testInfo)=>{
 
 })
 
-test.afterEach(async ({}, testInfo) => {
+test.afterEach(({}, testInfo) => {
         console.log("Title:",testInfo.title);
         console.log("Status:",testInfo.status);
         console.log("ExpectedStatus:",testInfo.expectedStatus);
