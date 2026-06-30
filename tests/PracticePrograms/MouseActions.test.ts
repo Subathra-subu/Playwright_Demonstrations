@@ -19,7 +19,7 @@ test('MouseActionsMove',async({page})=>{
 
 })
 
-test.only('DragAndDrop' ,async({page})=>{
+test('DragAndDrop' ,async({page})=>{
 
     await page.goto("https://www.leafground.com/drag.xhtml;jsessionid=node01x6kkrhmvm1cs1od1mekflsa1n19714763.node0");
 
